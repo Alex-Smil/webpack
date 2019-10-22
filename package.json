@@ -1,0 +1,26 @@
+{
+  "name": "WEBPACK",
+  "version": "1.0.0",
+  "description": "Учебный проект по изучению Webpack",
+  "main": "index.js",
+  "repository": "https://github.com/Alex-Smil/webpack",
+  "author": "Ismailov Alexander",
+  "license": "no license",
+  "scripts": {
+    "build": "webpack",
+    "test": "cross-env TESTBUILD=true npx webpack && mocha test-dist/main.js --require source-map-support/register && rmdir /s/q test-dist"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "chai": "^4.2.0",
+    "cross-env": "^6.0.3",
+    "jquery": "^3.4.1",
+    "mocha": "^6.2.2",
+    "process-env": "^1.1.0",
+    "source-map-support": "^0.5.13",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.9"
+  }
+}
