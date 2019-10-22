@@ -10,7 +10,7 @@ describe("distance", function() {
     it("calculates distance with the good ol' Pythagorean Theorem", function() {
         let origin = {x: 0.0, y: 0.0};
         let point = {x: 3.0, y: 4.0};
-      expect(distance(point, origin)).to.equal(555);
+      expect(distance(point, origin)).to.equal(5);
     });
 });
 

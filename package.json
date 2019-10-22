@@ -7,7 +7,8 @@
   "author": "Ismailov Alexander",
   "license": "no license",
   "scripts": {
-    "build": "webpack",
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production",
     "test": "cross-env TESTBUILD=true npx webpack && mocha test-dist/main.js --require source-map-support/register && rmdir /s/q test-dist"
   },
   "devDependencies": {
