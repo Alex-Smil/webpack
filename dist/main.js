@@ -106,7 +106,18 @@ eval("\n\n// Функция distance() принимает 2 значения, п
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nvar _distance = __webpack_require__(/*! ./distance */ \"./app/src/distance.js\");\n\nvar _jQuery = __webpack_require__(/*! jQuery */ \"./node_modules/jQuery/dist/jquery.js\");\n\nvar _jQuery2 = _interopRequireDefault(_jQuery);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar stores = [{ name: \"Cambridge Naturals\", x: -71.1189, y: 42.3895 }, { name: \"Sarah's Market\", x: -71.1311, y: 42.3823 }, { name: \"Whole Foods Fresh Pond\", x: -71.1420, y: 42.3904 }];\nvar here = { name: \"You are here\", x: -71.1470, y: 42.3834 };\nvar nearest = (0, _distance.sortByDistance)(here, stores)[0];\n// document.getElementById(\"nearest-store\").innerHTML = nearest.name;\n(0, _jQuery2.default)('#nearest-store').html(nearest.name);\n\n//# sourceURL=webpack:///./app/src/page.js?");
+eval("\n\n__webpack_require__(/*! ./style.css */ \"./app/src/style.css\");\n\nvar _distance = __webpack_require__(/*! ./distance */ \"./app/src/distance.js\");\n\nvar _jQuery = __webpack_require__(/*! jQuery */ \"./node_modules/jQuery/dist/jquery.js\");\n\nvar _jQuery2 = _interopRequireDefault(_jQuery);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar stores = [{ name: \"Cambridge Naturals\", x: -71.1189, y: 42.3895 }, { name: \"Sarah's Market\", x: -71.1311, y: 42.3823 }, { name: \"Whole Foods Fresh Pond\", x: -71.1420, y: 42.3904 }];\nvar here = { name: \"You are here\", x: -71.1470, y: 42.3834 };\nvar nearest = (0, _distance.sortByDistance)(here, stores)[0];\n// document.getElementById(\"nearest-store\").innerHTML = nearest.name;\n(0, _jQuery2.default)('#nearest-store').html(nearest.name);\nconsole.log(here);\n\n//# sourceURL=webpack:///./app/src/page.js?");
+
+/***/ }),
+
+/***/ "./app/src/style.css":
+/*!***************************!*\
+  !*** ./app/src/style.css ***!
+  \***************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("// removed by extract-text-webpack-plugin\n\n//# sourceURL=webpack:///./app/src/style.css?");
 
 /***/ }),
 
