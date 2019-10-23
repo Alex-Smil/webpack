@@ -1,5 +1,5 @@
 body {
-  background: burlywood;
+  background: #96f18a;
   max-width: 80%;
   margin: 0 auto; }
   body #nearest-store {
@@ -18,3 +18,4 @@ body {
   .component__text {
     color: greenyellow;
     font-size: 1.2rem; }
+

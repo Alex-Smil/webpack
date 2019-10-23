@@ -12,3 +12,4 @@ let nearest = sortByDistance(here, stores)[0];
 // document.getElementById("nearest-store").innerHTML = nearest.name;
 $('#nearest-store').html(nearest.name);
 console.log(here);
+console.log('test');

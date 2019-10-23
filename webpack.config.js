@@ -5,7 +5,8 @@ let entry = __dirname + "/app/src/page.js";
 // let outputPath = __dirname + "/dist/";
 let outputPath = path.resolve(__dirname, 'dist');
 
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const WebpackMd5Hash = require('webpack-md5-hash');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 if (process.env.TESTBUILD) {
@@ -39,24 +40,20 @@ module.exports = {
             },
             {
                 test: /\.scss$/,
-                use: ExtractTextPlugin.extract(
-                    {
-                        fallback: 'style-loader',
-                        use: ['css-loader', 'sass-loader']
-                    }
-                )
+                use: ['style-loader', MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
             }
         ]
     },
     plugins: [
-        new ExtractTextPlugin(
-            { filename: 'main.css' }
-        ),
-        new HtmlWebpackPlugin({
+        new MiniCssExtractPlugin( {
+            filename: 'main.[contenthash].css'
+        } ),
+        new HtmlWebpackPlugin( {
             inject: false,
             hash: true,
             template: './app/src/index.html',
             filename: 'index.html'
-        })
+        } ),
+        new WebpackMd5Hash()
     ]
 };
