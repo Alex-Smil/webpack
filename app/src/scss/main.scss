@@ -1,0 +1,28 @@
+body {
+    background: bisque;
+    max-width: 80%;
+    margin: 0 auto;
+
+    #nearest-store {
+        color: brown;
+        font-size: 2rem;
+    }
+}
+
+.component {
+    background: chocolate;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+
+    &__title {
+        color: darkslategray;
+    }
+
+    &__text {
+        color: greenyellow;
+        font-size: 1.2rem;
+    }
+}

@@ -1,4 +1,4 @@
-import './style.css'
+import './scss/main.scss'
 import {sortByDistance} from './distance';
 import $ from "jQuery";
 
