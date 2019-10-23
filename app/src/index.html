@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <title>Ближайший магазин чая из гибискуса</title>
+   <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
+ </head>
+ <body>
+  <div>
+      <p>Nearest store is <span id="nearest-store"></span></p>
+
+      <div class="component">
+        <h2 class="component__title">Component title</h2>
+        <div class="component__text"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident eius recusandae ducimus eum facere facilis impedit cum quam odio alias amet necessitatibus quia illum blanditiis suscipit earum perferendis ea distinctio possimus fugit mollitia, deserunt obcaecati iure. Fugit ad, minima nesciunt perferendis placeat eum consequuntur amet tenetur quae cumque quia blanditiis.</p></div>
+      </div>
+  </div>
+   
+   <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
+ </body>
+</html>
