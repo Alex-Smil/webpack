@@ -81,32 +81,32 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./app/src/page.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./app/src/js/page.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./app/src/distance.js":
-/*!*****************************!*\
-  !*** ./app/src/distance.js ***!
-  \*****************************/
+/***/ "./app/src/js/distance.js":
+/*!********************************!*\
+  !*** ./app/src/js/distance.js ***!
+  \********************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\n// Функция distance() принимает 2 значения, представленных\n// числами x и y, и возвращает расстояние между ними\n//\n// [TODO] Используйте ортодому\nfunction distance(p2, p1) {\n    var yDist = p2.y - p1.y;\n    var xDist = p2.x - p1.x;\n    return Math.sqrt(Math.pow(yDist, 2) + Math.pow(xDist, 2));\n}\n// sortByDistance принимает ваше местоположение и массив точек\n// и возвращает отсортированный массив точек\nfunction sortByDistance(myPt, points) {\n    return points.sort(function (pt1, pt2) {\n        return distance(pt1, myPt) - distance(pt2, myPt);\n    });\n}\n\nmodule.exports = { distance: distance, sortByDistance: sortByDistance };\n\n//# sourceURL=webpack:///./app/src/distance.js?");
+eval("\n\n// Функция distance() принимает 2 значения, представленных\n// числами x и y, и возвращает расстояние между ними\n//\n// [TODO] Используйте ортодому\nfunction distance(p2, p1) {\n    var yDist = p2.y - p1.y;\n    var xDist = p2.x - p1.x;\n    return Math.sqrt(Math.pow(yDist, 2) + Math.pow(xDist, 2));\n}\n// sortByDistance принимает ваше местоположение и массив точек\n// и возвращает отсортированный массив точек\nfunction sortByDistance(myPt, points) {\n    return points.sort(function (pt1, pt2) {\n        return distance(pt1, myPt) - distance(pt2, myPt);\n    });\n}\n\nmodule.exports = { distance: distance, sortByDistance: sortByDistance };\n\n//# sourceURL=webpack:///./app/src/js/distance.js?");
 
 /***/ }),
 
-/***/ "./app/src/page.js":
-/*!*************************!*\
-  !*** ./app/src/page.js ***!
-  \*************************/
+/***/ "./app/src/js/page.js":
+/*!****************************!*\
+  !*** ./app/src/js/page.js ***!
+  \****************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\n__webpack_require__(/*! ./scss/main.scss */ \"./app/src/scss/main.scss\");\n\nvar _distance = __webpack_require__(/*! ./distance */ \"./app/src/distance.js\");\n\nvar _jQuery = __webpack_require__(/*! jQuery */ \"./node_modules/jQuery/dist/jquery.js\");\n\nvar _jQuery2 = _interopRequireDefault(_jQuery);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar stores = [{ name: \"Cambridge Naturals\", x: -71.1189, y: 42.3895 }, { name: \"Sarah's Market\", x: -71.1311, y: 42.3823 }, { name: \"Whole Foods Fresh Pond\", x: -71.1420, y: 42.3904 }];\nvar here = { name: \"You are here\", x: -71.1470, y: 42.3834 };\nvar nearest = (0, _distance.sortByDistance)(here, stores)[0];\n// document.getElementById(\"nearest-store\").innerHTML = nearest.name;\n(0, _jQuery2.default)('#nearest-store').html(nearest.name);\nconsole.log(here);\nconsole.log('test');\nconsole.log('one more test');\n\n//# sourceURL=webpack:///./app/src/page.js?");
+eval("\n\n__webpack_require__(/*! ../scss/main.scss */ \"./app/src/scss/main.scss\");\n\nvar _distance = __webpack_require__(/*! ./distance */ \"./app/src/js/distance.js\");\n\nvar _jQuery = __webpack_require__(/*! jQuery */ \"./node_modules/jQuery/dist/jquery.js\");\n\nvar _jQuery2 = _interopRequireDefault(_jQuery);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar stores = [{ name: \"Cambridge Naturals\", x: -71.1189, y: 42.3895 }, { name: \"Sarah's Market\", x: -71.1311, y: 42.3823 }, { name: \"Whole Foods Fresh Pond\", x: -71.1420, y: 42.3904 }]; // import '../scss/main.scss';\n\nvar here = { name: \"You are here\", x: -71.1470, y: 42.3834 };\nvar nearest = (0, _distance.sortByDistance)(here, stores)[0];\n// document.getElementById(\"nearest-store\").innerHTML = nearest.name;\n(0, _jQuery2.default)('#nearest-store').html(nearest.name);\nconsole.log(here);\nconsole.log('test');\n\n//# sourceURL=webpack:///./app/src/js/page.js?");
 
 /***/ }),
 

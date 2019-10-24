@@ -1,4 +1,5 @@
-import './scss/main.scss'
+// import '../scss/main.scss';
+import '../scss/main.scss';
 import {sortByDistance} from './distance';
 import $ from "jQuery";
 
@@ -13,4 +14,3 @@ let nearest = sortByDistance(here, stores)[0];
 $('#nearest-store').html(nearest.name);
 console.log(here);
 console.log('test');
-console.log('one more test');

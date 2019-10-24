@@ -1,11 +1,10 @@
 const path = require('path');
 let glob = require("glob");
 
-let entry = __dirname + "/app/src/page.js";
+let entry = __dirname + "/app/src/js/page.js";
 let outputPath = path.resolve(__dirname, 'dist');
 
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const WebpackMd5Hash = require('webpack-md5-hash');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
@@ -54,7 +53,6 @@ module.exports = {
             hash: true,
             template: './app/src/index.html',
             filename: 'index.html'
-        } ),
-        new WebpackMd5Hash()
+        } )
     ]
 };
