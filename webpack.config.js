@@ -3,6 +3,9 @@ let glob = require("glob");
 
 let entry = __dirname + "/app/src/js/page.js";
 let outputPath = path.resolve(__dirname, 'dist');
+let filenameJS = '[name].[chunkhash].js';
+let filenameCSS = 'main.[contenthash].css';
+let devtool = '';
 
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -10,8 +13,9 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 if (process.env.TESTBUILD) {
     entry = glob.sync(__dirname + "/app/test/**/*.test.js");
-    // outputPath = __dirname + "/test-dist/";
-    outputPath =  path.resolve(__dirname, 'dist');
+    filenameJS = 'main.js';
+    filenameCSS = 'main.css';
+    outputPath =  path.resolve(__dirname, 'test-dist');
     devtool = "source-map";
 }
 
@@ -21,8 +25,10 @@ module.exports = {
     },
     output: {
         path: outputPath,
-        filename: '[name].[chunkhash].js'
+        // filename: '[name].[chunkhash].js'
+        filename: filenameJS
     },
+    devtool: devtool,
     module: {
         rules: [
             {
@@ -46,7 +52,8 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin( {
-            filename: 'main.[contenthash].css'
+            // filename: 'main.[contenthash].css'
+            filename: filenameCSS
         } ),
         new HtmlWebpackPlugin( {
             inject: false,
