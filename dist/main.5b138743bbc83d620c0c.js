@@ -106,7 +106,7 @@ eval("\n\n// Функция distance() принимает 2 значения, п
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\n__webpack_require__(/*! ./scss/main.scss */ \"./app/src/scss/main.scss\");\n\nvar _distance = __webpack_require__(/*! ./distance */ \"./app/src/distance.js\");\n\nvar _jQuery = __webpack_require__(/*! jQuery */ \"./node_modules/jQuery/dist/jquery.js\");\n\nvar _jQuery2 = _interopRequireDefault(_jQuery);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar stores = [{ name: \"Cambridge Naturals\", x: -71.1189, y: 42.3895 }, { name: \"Sarah's Market\", x: -71.1311, y: 42.3823 }, { name: \"Whole Foods Fresh Pond\", x: -71.1420, y: 42.3904 }];\nvar here = { name: \"You are here\", x: -71.1470, y: 42.3834 };\nvar nearest = (0, _distance.sortByDistance)(here, stores)[0];\n// document.getElementById(\"nearest-store\").innerHTML = nearest.name;\n(0, _jQuery2.default)('#nearest-store').html(nearest.name);\nconsole.log(here);\nconsole.log('test');\n\n//# sourceURL=webpack:///./app/src/page.js?");
+eval("\n\n__webpack_require__(/*! ./scss/main.scss */ \"./app/src/scss/main.scss\");\n\nvar _distance = __webpack_require__(/*! ./distance */ \"./app/src/distance.js\");\n\nvar _jQuery = __webpack_require__(/*! jQuery */ \"./node_modules/jQuery/dist/jquery.js\");\n\nvar _jQuery2 = _interopRequireDefault(_jQuery);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar stores = [{ name: \"Cambridge Naturals\", x: -71.1189, y: 42.3895 }, { name: \"Sarah's Market\", x: -71.1311, y: 42.3823 }, { name: \"Whole Foods Fresh Pond\", x: -71.1420, y: 42.3904 }];\nvar here = { name: \"You are here\", x: -71.1470, y: 42.3834 };\nvar nearest = (0, _distance.sortByDistance)(here, stores)[0];\n// document.getElementById(\"nearest-store\").innerHTML = nearest.name;\n(0, _jQuery2.default)('#nearest-store').html(nearest.name);\nconsole.log(here);\nconsole.log('test');\nconsole.log('one more test');\n\n//# sourceURL=webpack:///./app/src/page.js?");
 
 /***/ }),
 
@@ -117,7 +117,7 @@ eval("\n\n__webpack_require__(/*! ./scss/main.scss */ \"./app/src/scss/main.scss
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("var content = __webpack_require__(/*! !../../../node_modules/mini-css-extract-plugin/dist/loader.js!../../../node_modules/css-loader/dist/cjs.js!../../../node_modules/sass-loader/dist/cjs.js!./main.scss */ \"./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./app/src/scss/main.scss\");\n\nif (typeof content === 'string') {\n  content = [[module.i, content, '']];\n}\n\nvar options = {}\n\noptions.insert = \"head\";\noptions.singleton = false;\n\nvar update = __webpack_require__(/*! ../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ \"./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js\")(content, options);\n\nif (content.locals) {\n  module.exports = content.locals;\n}\n\n\n//# sourceURL=webpack:///./app/src/scss/main.scss?");
+eval("var content = __webpack_require__(/*! !../../../node_modules/mini-css-extract-plugin/dist/loader.js!../../../node_modules/css-loader/dist/cjs.js!../../../node_modules/postcss-loader/src!../../../node_modules/sass-loader/dist/cjs.js!./main.scss */ \"./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/src/index.js!./node_modules/sass-loader/dist/cjs.js!./app/src/scss/main.scss\");\n\nif (typeof content === 'string') {\n  content = [[module.i, content, '']];\n}\n\nvar options = {}\n\noptions.insert = \"head\";\noptions.singleton = false;\n\nvar update = __webpack_require__(/*! ../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ \"./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js\")(content, options);\n\nif (content.locals) {\n  module.exports = content.locals;\n}\n\n\n//# sourceURL=webpack:///./app/src/scss/main.scss?");
 
 /***/ }),
 
@@ -133,14 +133,14 @@ eval("/* WEBPACK VAR INJECTION */(function(module) {var __WEBPACK_AMD_DEFINE_ARR
 
 /***/ }),
 
-/***/ "./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./app/src/scss/main.scss":
-/*!*******************************************************************************************************************************************************************!*\
-  !*** ./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./app/src/scss/main.scss ***!
-  \*******************************************************************************************************************************************************************/
+/***/ "./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/src/index.js!./node_modules/sass-loader/dist/cjs.js!./app/src/scss/main.scss":
+/*!*****************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/src!./node_modules/sass-loader/dist/cjs.js!./app/src/scss/main.scss ***!
+  \*****************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./app/src/scss/main.scss?./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js");
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./app/src/scss/main.scss?./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/src!./node_modules/sass-loader/dist/cjs.js");
 
 /***/ }),
 

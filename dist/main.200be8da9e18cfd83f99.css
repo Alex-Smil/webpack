@@ -1,5 +1,5 @@
 body {
-  background: #96f18a;
+  background: #afcfab;
   max-width: 80%;
   margin: 0 auto; }
   body #nearest-store {
@@ -8,10 +8,15 @@ body {
 
 .component {
   background: chocolate;
+  display: -webkit-box;
   display: flex;
-  flex-flow: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-flow: column;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
   padding: 30px; }
   .component__title {
     color: darkslategray; }

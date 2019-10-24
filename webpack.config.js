@@ -2,12 +2,12 @@ const path = require('path');
 let glob = require("glob");
 
 let entry = __dirname + "/app/src/page.js";
-// let outputPath = __dirname + "/dist/";
 let outputPath = path.resolve(__dirname, 'dist');
 
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const WebpackMd5Hash = require('webpack-md5-hash');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 if (process.env.TESTBUILD) {
     entry = glob.sync(__dirname + "/app/test/**/*.test.js");
@@ -40,11 +40,12 @@ module.exports = {
             },
             {
                 test: /\.scss$/,
-                use: ['style-loader', MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
+                use: ['style-loader', MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader']
             }
         ]
     },
     plugins: [
+        new CleanWebpackPlugin(),
         new MiniCssExtractPlugin( {
             filename: 'main.[contenthash].css'
         } ),
